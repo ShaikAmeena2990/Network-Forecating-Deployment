@@ -1,3 +1,90 @@
-<h1>
-    helloworld
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Network Forecasting ML App</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Hind', sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      color: #2c3e50;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Network Forecasting Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+
+      <input type="text" name="id_time" placeholder="id_time" required />
+      <input type="text" name="n_flows" placeholder="n_flows" required />
+      <input type="text" name="n_packets" placeholder="n_packets" required />
+      <input type="text" name="n_bytes" placeholder="n_bytes" required />
+      <input type="text" name="sum_n_dest_asn" placeholder="sum_n_dest_asn" required />
+      <input type="text" name="average_n_dest_asn" placeholder="average_n_dest_asn" required />
+      <input type="text" name="std_n_dest_asn" placeholder="std_n_dest_asn" required />
+      <input type="text" name="sum_n_dest_ports" placeholder="sum_n_dest_ports" required />
+      <input type="text" name="average_n_dest_ports" placeholder="average_n_dest_ports" required />
+      <input type="text" name="std_n_dest_ports" placeholder="std_n_dest_ports" required />
+      <input type="text" name="sum_n_dest_ip" placeholder="sum_n_dest_ip" required />
+      <input type="text" name="average_n_dest_ip" placeholder="average_n_dest_ip" required />
+      <input type="text" name="std_n_dest_ip" placeholder="std_n_dest_ip" required />
+      <input type="text" name="tcp_udp_ratio_packets" placeholder="tcp_udp_ratio_packets" required />
+      <input type="text" name="tcp_udp_ratio_bytes" placeholder="tcp_udp_ratio_bytes" required />
+      <input type="text" name="dir_ratio_packets" placeholder="dir_ratio_packets" required />
+      <input type="text" name="dir_ratio_bytes" placeholder="dir_ratio_bytes" required />
+      <input type="text" name="avg_duration" placeholder="avg_duration" required />
+      <input type="text" name="avg_ttl" placeholder="avg_ttl" required />
+
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>
