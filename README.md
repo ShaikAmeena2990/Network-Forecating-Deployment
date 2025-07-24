@@ -80,12 +80,18 @@ Configure security groups and auto-scaling.
 Test API endpoint using curl or Postman,
 Monitor ECS tasks and CloudWatch logs.
 
-Project Pipeline
+# How Predictions Work
 
-Data Collection and Preprocessing
+The models predict the next time step of network traffic metrics based on a sequence of past observations (e.g., last 12 time steps). This allows for continuous forecasting, where each prediction is based on the most recent historical data, enabling real-time or near real-time forecasting for traffic management.
 
-Load and clean network traffic data from CSV
+# Results
 
-Scale features using MinMaxScaler
+LSTM Model: Achieved RMSE of 0.18 on the test data
 
-Create time windows for sequence prediction
+GRU-FCN Model: Achieved RMSE of 0.11, indicating better performance
+
+The GRU-FCN model effectively captured complex temporal and spatial patterns in the network data, making it a more suitable choice for this task.
+
+
+
+
