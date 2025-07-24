@@ -39,43 +39,43 @@ Time Series Forecasting
 
 # End-to-End Process
 
-# 1.Data Collection and Preprocessing
+1.Data Collection and Preprocessing
 
 Load and clean network traffic data,
 Scale features using MinMaxScaler,
 Create time windows for sequence prediction
 
-# 2.Model Training
+2.Model Training
 
-Train both LSTM and GRU-FCN models on the dataset
-Evaluate models using RMSE, loss, and visualizations
+Train both LSTM and GRU-FCN models on the dataset,
+Evaluate models using RMSE, loss, and visualizations.
 
-# 3.Model Saving
+3.Model Saving
 
 Save the trained models using pickle
 
-# 4.API Development
+4.API Development
 
-Create Flask API for serving model predictions
+Create Flask API for serving model predictions,
 Load model and accept JSON input for inference
 
-# 5.Dockerization
+5.Dockerization
 
 Write Dockerfile to containerize the Flask app
 Test locally using docker build and docker run
 
-# 6.CI/CD Pipeline
+6.CI/CD Pipeline
 
-Set up GitHub Actions workflow for automatic build and deployment
-Build Docker image, push to AWS ECR, and deploy to ECS
+Set up GitHub Actions workflow for automatic build and deployment,
+Build Docker image, push to AWS ECR, and deploy to ECS.
 
-# 8.Deployment on AWS
+8.Deployment on AWS
 
-Create ECR repository and ECS cluster
-Deploy using Fargate or EC2 launch type
-Configure security groups and auto-scaling
+Create ECR repository and ECS cluster,
+Deploy using Fargate or EC2 launch type,
+Configure security groups and auto-scaling.
 
-# 9.Testing & Monitoring
+9.Testing & Monitoring
 
-Test API endpoint using curl or Postman
-Monitor ECS tasks and CloudWatch logs
+Test API endpoint using curl or Postman,
+Monitor ECS tasks and CloudWatch logs.
