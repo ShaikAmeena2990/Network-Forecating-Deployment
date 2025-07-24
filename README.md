@@ -60,7 +60,7 @@ Deploy using Fargate or EC2 launch type
 
 Configure security groups and auto-scaling
 
-# Testing & Monitoring
+# 9.Testing & Monitoring
 
 Test API endpoint using curl or Postman
 
