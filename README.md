@@ -16,7 +16,7 @@ Deployed on AWS ECR & ECS
 
 # End-to-End Process
 
-# Data Collection and Preprocessing
+# 1.Data Collection and Preprocessing
 
 Load and clean network traffic data
 
@@ -24,35 +24,35 @@ Scale features using MinMaxScaler
 
 Create time windows for sequence prediction
 
-# Model Training
+# 2.Model Training
 
 Train both LSTM and GRU-FCN models on the dataset
 
 Evaluate models using RMSE, loss, and visualizations
 
-# Model Saving
+# 3.Model Saving
 
 Save the trained models using pickle
 
-# API Development
+# 4.API Development
 
 Create Flask API for serving model predictions
 
 Load model and accept JSON input for inference
 
-# Dockerization
+# 5.Dockerization
 
 Write Dockerfile to containerize the Flask app
 
 Test locally using docker build and docker run
 
-# CI/CD Pipeline
+# 6.CI/CD Pipeline
 
 Set up GitHub Actions workflow for automatic build and deployment
 
 Build Docker image, push to AWS ECR, and deploy to ECS
 
-# Deployment on AWS
+# 8.Deployment on AWS
 
 Create ECR repository and ECS cluster
 
