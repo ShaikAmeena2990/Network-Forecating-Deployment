@@ -2,17 +2,17 @@
 
 This project implements a network traffic forecasting solution using both LSTM (Long Short-Term Memory) and GRU-FCN (Gated Recurrent Unit - Fully Convolutional Network) models. It includes data preprocessing, training, evaluation, and deployment via a Flask API, containerized using Docker, and deployed on AWS ECR & ECS with CI/CD automation via GitHub Actions.
 
-# Features
+# Skills & Tools Showcased
 
-Models: LSTM and GRU-FCN for time series forecasting
+Python (LSTM, GRU-FCN, Flask)
 
-Deployment:
+Docker, GitHub Actions
 
-Dockerized Flask API
+AWS ECR, ECS, EC2 (for deployment)
 
-CI/CD with GitHub Actions
+CI/CD automation
 
-Deployed on AWS ECR & ECS
+Time Series Forecasting
 
 # End-to-End Process
 
