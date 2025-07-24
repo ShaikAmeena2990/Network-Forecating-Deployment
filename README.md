@@ -37,7 +37,7 @@ CI/CD automation
 
 Time Series Forecasting
 
-# End-to-End Process
+# Project Pipeline
 
 1.Data Collection and Preprocessing
 
@@ -79,3 +79,13 @@ Configure security groups and auto-scaling.
 
 Test API endpoint using curl or Postman,
 Monitor ECS tasks and CloudWatch logs.
+
+Project Pipeline
+
+Data Collection and Preprocessing
+
+Load and clean network traffic data from CSV
+
+Scale features using MinMaxScaler
+
+Create time windows for sequence prediction
