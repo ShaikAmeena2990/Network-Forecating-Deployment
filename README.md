@@ -12,20 +12,20 @@ The motivation for this project stems from the need for more accurate forecastin
 
 The dataset consists of network traffic statistics collected over multiple days, including:
 
-Features:
+**Features**
 
-n_flows, n_packets, n_bytes
+- n_flows, n_packets, n_bytes
 
-Destination ASN and IP statistics
+- Destination ASN and IP statistics
 
-TCP/UDP ratios, direction ratios
+- TCP/UDP ratios, direction ratios
 
-Average duration, TTL, and timestamps
+- Average duration, TTL, and timestamps
 
 Each row corresponds to a daily aggregated snapshot of network activity. The goal is to predict future values of network traffic metrics based on past patterns. Data preprocessing includes scaling, time-windowing, and feature selection.
 
 
-# Skills & Tools Showcased
+## Skills & Tools Showcased
 
 - Python (LSTM, GRU-FCN, Flask)
 
@@ -39,7 +39,7 @@ Each row corresponds to a daily aggregated snapshot of network activity. The goa
 
 ## Project Pipeline
 
-1.Data Collection and Preprocessing
+**Data Collection and Preprocessing**
 
 - Load and clean network traffic data
 
@@ -47,35 +47,35 @@ Each row corresponds to a daily aggregated snapshot of network activity. The goa
 
 - Create time windows for sequence prediction
 
-2.Model Training
+**Model Training**
 
 - Train both LSTM and GRU-FCN models on the dataset
   
 - Evaluate models using RMSE, loss, and visualizations.
 
-3.Model Saving
+**Model Saving**
 
 Save the trained models using pickle
 
-4.API Development
+**API Development**
 
 - Create Flask API for serving model predictions
   
 - Load model and accept JSON input for inference
 
-5.Dockerization
+**Dockerization**
 
 - Write Dockerfile to containerize the Flask app
 
 - Test locally using docker build and docker run
 
-6.CI/CD Pipeline
+**CI/CD Pipeline**
 
 - Set up GitHub Actions workflow for automatic build and deployment
   
 - Build Docker image, push to AWS ECR, and deploy to ECS.
 
-8.Deployment on AWS
+**Deployment on AWS**
 
 - Create ECR repository and ECS cluster
   
@@ -83,17 +83,17 @@ Save the trained models using pickle
   
 - Configure security groups and auto-scaling.
 
-9.Testing & Monitoring
+**Testing & Monitoring**
 
 - Test API endpoint using curl or Postman
   
 - Monitor ECS tasks and CloudWatch logs.
 
-# How Predictions Work
+## How Predictions Work
 
 The models predict the next time step of network traffic metrics based on a sequence of past observations (e.g., last 12 time steps). This allows for continuous forecasting, where each prediction is based on the most recent historical data, enabling real-time or near real-time forecasting for traffic management.
 
-# Results
+## Results
 
 LSTM Model: Achieved RMSE of 0.18 on the test data
 
