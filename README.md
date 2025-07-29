@@ -29,7 +29,7 @@ Each row corresponds to a daily aggregated snapshot of network activity. The goa
 
 - Python (LSTM, GRU-FCN, Flask)
 
-- Docker, GitHub Actions
+- Docker, CICD Pipelines Via GitHub Actions
 
 - AWS ECR, ECS, EC2 (for deployment)
 
