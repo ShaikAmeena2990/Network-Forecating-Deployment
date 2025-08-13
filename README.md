@@ -78,10 +78,7 @@ Save the trained models using pickle
 **Deployment on AWS**
 
 - Create ECR repository and ECS cluster
-  
-- Deploy using Fargate or EC2 launch type
-  
-- Configure security groups and auto-scaling.
+
 
 **Testing & Monitoring**
 
